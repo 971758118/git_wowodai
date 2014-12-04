@@ -1,0 +1,31 @@
+package com.example.common;
+
+import java.io.Serializable;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import android.graphics.Bitmap;
+
+@SuppressWarnings("serial")
+public class SerializableTools implements Serializable {
+	private Map<String, Object> mapObject;
+	private Bitmap bitMap;
+
+	public Bitmap getBitMap() {
+		return bitMap;
+	}
+
+	public void setBitMap(Bitmap bitMap) {
+		this.bitMap = bitMap;
+	}
+
+	public Map<String, Object> getMapObject() {
+		return mapObject;
+	}
+
+	public void setMapObject(Map<String, Object> mapObject) {
+		this.mapObject = mapObject;
+	}
+
+}

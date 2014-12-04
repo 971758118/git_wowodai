@@ -1,0 +1,29 @@
+<resources>
+
+    <style name="AppTheme" parent="AppBaseTheme">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <!-- 自定义进度条 -->
+    <style name="MyProgressBar" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:maxHeight">50dip</item>
+        <item name="android:minHeight">8dip</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+        <item name="android:progressDrawable">@drawable/my_progressbar</item>
+    </style>
+
+    <!-- 九宫格锁屏 -->
+    <style name="ButtonGreen" parent="@android:style/Widget.Button">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textColor">@drawable/lockpattern_skin_color_button</item>
+        <item name="android:background">@drawable/lockpattern_common_btn_green</item>
+    </style>
+
+    <!-- 九宫格锁屏 -->
+    <style name="ButtonRed" parent="@android:style/Widget.Button">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textColor">@drawable/lockpattern_skin_color_button</item>
+        <item name="android:background">@drawable/lockpattern_common_btn_red</item>
+    </style>
+
+</resources>

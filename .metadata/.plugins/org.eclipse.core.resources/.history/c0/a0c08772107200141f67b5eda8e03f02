@@ -1,0 +1,29 @@
+package com.example.main;
+
+import java.util.List;
+
+import com.example.wowodai.R;
+
+import android.app.Activity;
+import android.graphics.Bitmap;
+import android.os.Bundle;
+import android.widget.LinearLayout;
+
+public class GridViewActivity extends Activity {
+	private LinearLayout layout_horizontalScroll;
+	private List<Bitmap> list;// 上级传来的图片
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.gridviewactivity);
+
+	}
+
+	private void init() {
+		layout_horizontalScroll = (LinearLayout) findViewById(R.id.layout_horizontalScroll);
+		layout_horizontalScroll.addView(child);
+	}
+
+}

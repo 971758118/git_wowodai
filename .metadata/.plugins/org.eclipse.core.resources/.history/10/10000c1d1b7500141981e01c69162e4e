@@ -1,0 +1,91 @@
+package com.example.main;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import com.example.common.FileUtils;
+import com.example.common.MyHeadView;
+import com.example.common.SerializableTools;
+import com.example.common.TypeChange;
+import com.example.wowodai.R;
+import com.example.xiangmu.XiangMuDetailActivity;
+
+import android.app.Activity;
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.ImageView.ScaleType;
+import android.widget.LinearLayout;
+
+public class GridViewActivity extends Activity implements OnClickListener {
+	private MyHeadView myHeadView;
+	private LinearLayout layout_head_back;
+	private TypeChange typeChange;
+	private LinearLayout layout_horizontalScroll;
+	private List<Bitmap> mapList;// 上级传来的图片
+	private ImageView imageView;
+	private Context context;
+	private FileUtils fileUtils;
+
+	@SuppressWarnings("unchecked")
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.gridviewactivity);
+		context = GridViewActivity.this;
+		fileUtils = new FileUtils(context);
+		typeChange = new TypeChange();
+		mapList = new ArrayList<Bitmap>();
+		if (fileUtils.getBitmapFromCacheFileCount() != 0) {
+			for (int i = 0; i < fileUtils.getBitmapFromCacheFileCount(); i++) {
+				mapList.add(fileUtils.getBitmapToCache("cacheBitmap" + i));
+			}
+			fileUtils.deleteBitmapFromCacheFile();
+		}
+
+		init();
+
+	}
+
+	private void init() {
+		myHeadView = (MyHeadView) findViewById(R.id.myHeadView);
+
+		layout_head_back = myHeadView.getBackLayout();
+		layout_head_back.setOnClickListener(this);
+		myHeadView.setTitle("项目详情");
+
+		layout_horizontalScroll = (LinearLayout) findViewById(R.id.layout_horizontalScroll);
+		for (int i = 0; i < mapList.size(); i++) {
+			imageView = new ImageView(context);
+			imageView.setImageBitmap(mapList.get(i));
+			imageView.setScaleType(ScaleType.CENTER);
+			imageView.setPadding(5, 0, 5, 0);
+
+			layout_horizontalScroll.addView(imageView);
+		}
+
+	}
+
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		switch (v.getId()) {
+		case R.id.layout_head_back:
+			finish();
+			break;
+
+		default:
+			break;
+		}
+
+	}
+
+}

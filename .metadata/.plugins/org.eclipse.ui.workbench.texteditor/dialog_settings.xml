@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="273" key="DIALOG_WIDTH"/>
+		<item value="228" key="DIALOG_Y_ORIGIN"/>
+		<item value="394" key="DIALOG_HEIGHT"/>
+		<item value="1062" key="DIALOG_X_ORIGIN"/>
+		<item value="1|微软雅黑|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|微软雅黑" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="true" key="wrap"/>
+		<item value="true" key="isRegEx"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="false" key="wholeword"/>
+		<item value="android:configChanges=&quot;orientation|keyboardHidden|screenSize&quot;" key="selection"/>
+		<list key="findhistory">
+			<item value="android:configChanges=&quot;orientation\|keyboardHidden&quot;"/>
+			<item value="initDiYaImgDataHandler"/>
+			<item value="gv_diya"/>
+			<item value="myHeadView"/>
+			<item value="Log\.i"/>
+			<item value="Programmer"/>
+			<item value="isRegister"/>
+			<item value="TimeCount"/>
+		</list>
+		<list key="replacehistory">
+			<item value="android:configChanges=&quot;orientation|keyboardHidden|screenSize&quot;"/>
+			<item value="ParcelableTools"/>
+			<item value="str_"/>
+			<item value="50dp"/>
+			<item value="tv_time"/>
+			<item value="tv_validity"/>
+			<item value="tv_status"/>
+			<item value="tv_content"/>
+		</list>
+	</section>
+</section>

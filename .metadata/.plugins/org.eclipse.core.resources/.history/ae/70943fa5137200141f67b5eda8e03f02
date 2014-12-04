@@ -1,0 +1,52 @@
+package com.example.main;
+
+import java.util.List;
+
+import com.example.common.SerializableTools;
+import com.example.wowodai.R;
+
+import android.app.Activity;
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.os.Bundle;
+import android.widget.ImageView;
+import android.widget.ImageView.ScaleType;
+import android.widget.LinearLayout;
+
+public class GridViewActivity extends Activity {
+	private LinearLayout layout_horizontalScroll;
+	private List<Bitmap> mapList;// 上级传来的图片
+	private ImageView imageView;
+	private Context context;
+
+	@SuppressWarnings("unchecked")
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.gridviewactivity);
+		context = GridViewActivity.this;
+
+		Bundle bundle = new Bundle();
+		SerializableTools mapListSerializable = new SerializableTools();
+		bundle = getIntent().getBundleExtra("bundle");
+
+		mapList = (List<Bitmap>) mapListSerializable.getMapObject().get(
+				"mapList");
+		init();
+
+	}
+
+	private void init() {
+		layout_horizontalScroll = (LinearLayout) findViewById(R.id.layout_horizontalScroll);
+		for (int i = 0; i < mapList.size(); i++) {
+			imageView = new ImageView(context);
+			imageView.setImageBitmap(mapList.get(i));
+			imageView.setScaleType(ScaleType.CENTER);
+
+			layout_horizontalScroll.addView(imageView);
+		}
+
+	}
+
+}

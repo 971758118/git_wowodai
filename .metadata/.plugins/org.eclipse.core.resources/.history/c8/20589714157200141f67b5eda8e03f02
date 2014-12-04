@@ -1,0 +1,7 @@
+package com.example.common;
+
+import android.os.Parcel;
+
+public class ParcelableTools extends Parcel {
+
+}

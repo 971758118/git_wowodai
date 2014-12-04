@@ -1,0 +1,33 @@
+package com.example.common;
+
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class ParcelableTools implements Parcelable {
+	public String sex;
+	public String name;
+
+	public int describeContents() {
+		return 0;
+	}
+
+	public void writeToParcel(Parcel out, int flags) {
+		out.writeString(sex);
+		out.writeString(name);
+	}
+
+	public static final Parcelable.Creator<ParcelableTools> CREATOR = new Parcelable.Creator<ParcelableTools>() {
+		public ParcelableTools createFromParcel(Parcel in) {
+			return new ParcelableTools(in);
+		}
+
+		public ParcelableTools[] newArray(int size) {
+			return new ParcelableTools[size];
+		}
+	};
+
+	private ParcelableTools(Parcel in) {
+		sex = in.readString();
+		name = in.readString();
+	}
+}

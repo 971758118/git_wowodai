@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.wowodai"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.example.common.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/main"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.main.Init"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.main.MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" >
+        </activity>
+        <activity
+            android:name="com.example.xiangmu.XiangMuDetailActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" >
+        </activity>
+        <activity
+            android:name="com.example.baozhang.Baozhang_detailActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" >
+        </activity>
+        <activity
+            android:name="com.example.zhanghu.SyjlActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" >
+        </activity>
+        <activity
+            android:name="com.example.zhanghu.TzxmjlActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" >
+        </activity>
+        <activity
+            android:name="com.example.zhanghu.WddjqActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" >
+        </activity>
+        <activity
+            android:name="com.example.zhanghu.ZczjActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" >
+        </activity>
+        <activity
+            android:name="com.example.zhanghu.ZhszActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" >
+        </activity>
+        <activity
+            android:name="com.example.zhanghu.ZhyejActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" >
+        </activity>
+        <activity
+            android:name="com.example.zhanghu.Zhsz_xgdlmmActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" >
+        </activity>
+        <activity
+            android:name="com.example.zhanghu.Zhsz_xgsjhmActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" >
+        </activity>
+        <activity
+            android:name="com.example.zhanghu.Zhsz_xgssmmActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" >
+        </activity>
+        <activity
+            android:name="com.example.main.LoginActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" >
+        </activity>
+        <activity
+            android:name="com.example.main.RegisterActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" >
+        </activity>
+        <activity
+            android:name="com.example.main.RegisterActivity2"
+            android:configChanges="orientation|keyboardHidden|screenSize" >
+        </activity>
+        <activity
+            android:name="com.example.main.GridViewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" >
+        </activity>
+        <activity
+            android:name="com.example.suoping.CreateGesturePasswordActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" >
+        </activity>
+        <activity
+            android:name="com.example.suoping.UnlockGesturePasswordActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" >
+        </activity>
+    </application>
+
+</manifest>

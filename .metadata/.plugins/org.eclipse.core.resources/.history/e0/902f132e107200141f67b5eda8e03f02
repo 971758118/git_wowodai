@@ -1,0 +1,24 @@
+package com.example.main;
+
+import com.example.wowodai.R;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.LinearLayout;
+
+public class GridViewActivity extends Activity {
+	private LinearLayout layout_horizontalScroll;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.gridviewactivity);
+
+	}
+
+	private void init() {
+		layout_horizontalScroll = (LinearLayout) findViewById(R.id.layout_horizontalScroll);
+	}
+
+}
